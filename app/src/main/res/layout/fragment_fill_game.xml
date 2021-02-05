@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FillGameFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include
+            android:id="@+id/game_title"
+            layout="@layout/view_game_title"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/layout_info_card"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/shape_round_main"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/game_title">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="去学校"
+                android:textColor="@color/title_text"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="go to __________"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="12dp"
+                android:text="请点击下列正确答案"
+                android:textColor="@color/text_tips_gray"
+                android:textSize="12dp" />
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <RelativeLayout
+            android:id="@+id/answerA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/layout_info_card">
+
+            <TextView
+                android:id="@+id/txt_wordA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/shape_round_text"
+                android:text="supermarket"
+                android:textColor="@color/text_blue"
+                android:textSize="18dp" />
+
+            <ImageView
+                android:id="@+id/img_super_manA"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_below="@id/txt_wordA"
+                android:layout_marginTop="-5dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/answerB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            app:layout_constraintLeft_toRightOf="@id/guideline"
+            app:layout_constraintTop_toTopOf="@id/answerA">
+
+            <TextView
+                android:id="@+id/txt_wordB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_round_text"
+                android:text="supermarket"
+                android:textColor="@color/text_blue"
+                android:textSize="18dp" />
+
+            <ImageView
+                android:id="@+id/img_super_manB"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_below="@id/txt_wordB"
+                android:layout_marginTop="-5dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center"
+            app:layout_constraintEnd_toStartOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@id/answerA">
+
+            <TextView
+                android:id="@+id/txt_wordC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_round_text"
+                android:text="supermarket"
+                android:textColor="@color/text_blue"
+                android:textSize="18dp" />
+
+            <ImageView
+                android:id="@+id/img_super_manC"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_below="@id/txt_wordC"
+                android:layout_marginTop="-5dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            app:layout_constraintStart_toEndOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/answerB">
+
+            <TextView
+                android:id="@+id/txt_wordD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_round_text"
+                android:text="supermarket"
+                android:textColor="@color/text_blue"
+                android:textSize="18dp" />
+
+            <ImageView
+                android:id="@+id/img_super_manD"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_below="@id/txt_wordD"
+                android:layout_marginTop="-5dp" />
+        </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

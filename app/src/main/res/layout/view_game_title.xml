@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_title"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:paddingTop="7dp"
+    android:paddingBottom="7dp"
+    android:orientation="horizontal">
+    <View
+        android:id="@+id/top_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fitsSystemWindows="false"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:id="@+id/layout_music"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/shape_round_rect"
+        android:orientation="horizontal"
+        android:padding="2dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_view">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/shape_circle_rec"
+            android:padding="4dp"
+            android:src="@mipmap/icon_music" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="12dp"
+            android:text="@string/text_sound_effect"
+            android:textColor="@color/title_text"
+            android:textSize="12dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_progress"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:background="@drawable/shape_round_rect"
+        android:orientation="horizontal"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/top_view"
+        app:layout_constraintEnd_toStartOf="@+id/layout_total"
+        app:layout_constraintStart_toEndOf="@+id/layout_music">
+
+        <com.vandine.fillgame.TimeProgressView
+            android:id="@+id/time_progress"
+            android:layout_width="match_parent"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            app:sideColor="@color/progress_gray"
+            app:backgroundColor="@color/progress_blue"
+            android:layout_height="10dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_total"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:background="@drawable/shape_round_rect"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        app:layout_constraintRight_toLeftOf="@+id/exit"
+        app:layout_constraintTop_toBottomOf="@id/top_view" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="8/10"
+            android:textColor="@color/title_text"
+            android:textSize="12dp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/exit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/shape_ovel_rec"
+        android:padding="3dp"
+        android:src="@mipmap/icon_delete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_view" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
